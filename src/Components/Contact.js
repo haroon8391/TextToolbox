@@ -3,22 +3,49 @@ import React from 'react'
 export default function Contact(props) {
     return (
         <div>
-            <div className="container1">
-                <form className="form-inline">
-                    <label className="sr-only mt-5" style={{ color: props.mode === "dark" ? "White" : "#363738" }} htmlFor="inlineFormInputName2">Name</label>
-                    <input type="text" style={{ backgroundColor: props.mode === "dark" ? "#363738" : "White", color: props.mode === "dark" ? "White" : "#363738" }} className="form-control my-2 mr-sm-2 w-50" id="inlineFormInputName2" placeholder="Enter your name" />
-
-                    <label className="sr-only" style={{ color: props.mode === "dark" ? "White" : "#363738" }} htmlFor="inlineFormInputGroupUsername2">Email</label>
-                    <div className="input-group mb-2 mr-sm-2 w-50">
-                        <div className="input-group-prepend">
-                            <div className="input-group-text my-2" style={{ backgroundColor: props.mode === "dark" ? "#363738" : "White", color: props.mode === "dark" ? "White" : "#363738" }}>@</div>
-                        </div>
-                        <input type="text" className="form-control my-2" style={{ backgroundColor: props.mode === "dark" ? "#363738" : "White", color: props.mode === "dark" ? "White" : "#363738" }} id="inlineFormInputGroupUsername2" placeholder="Enter your email" />
+            <form class="row g-3">
+                <div class="col-md-4">
+                    <label for="validationDefault01" class="form-label">First name</label>
+                    <input type="text" class="form-control" id="validationDefault01" value="Mark" required />
+                </div>
+                <div class="col-md-4">
+                    <label for="validationDefault02" class="form-label">Last name</label>
+                    <input type="text" class="form-control" id="validationDefault02" value="Otto" required />
+                </div>
+                <div class="col-md-4">
+                    <label for="validationDefaultUsername" class="form-label">Username</label>
+                    <div class="input-group">
+                        <span class="input-group-text" id="inputGroupPrepend2">@</span>
+                        <input type="text" class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" required />
                     </div>
-
-                    <button type="submit" className="btn btn-primary ">Submit</button>
-                </form>
-            </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="validationDefault03" class="form-label">City</label>
+                    <input type="text" class="form-control" id="validationDefault03" required />
+                </div>
+                <div class="col-md-3">
+                    <label for="validationDefault04" class="form-label">State</label>
+                    <select class="form-select" id="validationDefault04" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option>...</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label for="validationDefault05" class="form-label">Zip</label>
+                    <input type="text" class="form-control" id="validationDefault05" required />
+                </div>
+                <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required />
+                        <label class="form-check-label" for="invalidCheck2">
+                            Agree to terms and conditions
+                        </label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Submit form</button>
+                </div>
+            </form>
         </div>
     )
 }

@@ -30,8 +30,8 @@ function App() {
         <Navbar title="React" mode={mode} changeMode={changeMode} textCol={textCol} />
         <div className="container my-4">
           <Routes>
-            <Route path="/about" element={<About mode={mode} />} />
             <Route path="/" element={<TextForm heading="TextUtils - Word Counter, Character Counter" mode={mode} />} />
+            <Route path="/about" element={<About mode={mode} />} />
             <Route path='/Contact' element={<Contact mode={mode} />} ></Route>
           </Routes>
         </div>
